@@ -10,6 +10,9 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
+import {FormsModule} from '@angular/forms';
+import { PipeTestComponent } from './Components/pipe-test/pipe-test.component';
+
 
 
 @NgModule({
@@ -21,11 +24,13 @@ import { PageNotFoundComponent } from './Components/page-not-found/page-not-foun
     NavbarComponent,
     HeaderComponent,
     FooterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    PipeTestComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
