@@ -12,8 +12,8 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
 import {FormsModule} from '@angular/forms';
 import { PipeTestComponent } from './Components/pipe-test/pipe-test.component';
-
-
+import { SalesModule } from './SalesModule/sales/sales.module';
+//import { KmtometerPipe } from './Pipes/kmtometer.pipe';
 
 @NgModule({
   declarations: [
@@ -25,12 +25,14 @@ import { PipeTestComponent } from './Components/pipe-test/pipe-test.component';
     HeaderComponent,
     FooterComponent,
     PageNotFoundComponent,
-    PipeTestComponent
+    PipeTestComponent,
+    //KmtometerPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule 
+    FormsModule ,
+    SalesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
