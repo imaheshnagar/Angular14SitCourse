@@ -1,0 +1,24 @@
+Two way binding
+
+TypeScript
+https://www.w3schools.com/typescript/
+
+null/undefined
+implicit/explict 
+import/export 
+interface
+optional and optional chaining
+fat arrow function
+type cast <>
+Arrays
+
+
+Interview 
+
+basic
+   Optional chaining 
+   use of interface 
+   type cast 
+  
+
+

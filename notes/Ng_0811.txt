@@ -1,0 +1,25 @@
+
+Decorators 
+@Pipe
+   property decorator - @input/@output
+
+Interview question
+basic
+      json pipe
+      async pipe
+      slice pipe 
+     send data from parent component to child component (ans- @input decorator)
+     send data from child component to parent component (ans- @output decorator)
+      
+
+Advance 
+     pure vs impure pipe 
+    event emitter 
+
+
+
+
+
+
+
+

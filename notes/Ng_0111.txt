@@ -1,0 +1,17 @@
+component designs 
+
+Data binding (one Way)
+           => String Interpolation {{ }}
+           => Property binding  []
+           =>Event Binding ( )
+Template Reference Variable 
+
+interview 
+
+basic
+   what is data binding
+   Template Reference Variable
+
+advance 
+    
+String Interpolation  vs Property binding 

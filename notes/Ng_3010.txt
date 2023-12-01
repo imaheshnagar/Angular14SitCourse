@@ -1,0 +1,26 @@
+
+ IDE - Visual studio code ( for coding)
+	https://code.visualstudio.com/  
+
+ Node.js  => to run appl (packages) 
+
+https://nodejs.org/en/download
+
+   angular package 
+if error run first Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+  
+   npm install -g @angular/cli
+
+
+ interview 
+basic
+ 	 package.json vs angular.json
+  
+ Advance 
+  	 main.ts
+  	 angular.js setting (build/serve)
+
+
+
+
+ 

@@ -1,0 +1,26 @@
+
+Decorators 
+https://www.tektutorialshub.com/angular/angular-decorators/
+
+@ngModule
+@ngComponent
+@Pipe
+https://www.tektutorialshub.com/angular/angular-pipes/  (practice inbuild pipes)
+
+Interview question
+basic
+  what is decorator and there types 
+  @ngmodule where to register component  , where to register external module , where to register services 
+  @ngcomponent  selector
+  how to pass argument to pipe
+
+Advance 
+   Pipe which interface to implement  and what method 
+
+
+
+
+
+
+
+
