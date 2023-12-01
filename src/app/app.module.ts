@@ -13,6 +13,8 @@ import { PageNotFoundComponent } from './Components/page-not-found/page-not-foun
 import {FormsModule} from '@angular/forms';
 import { PipeTestComponent } from './Components/pipe-test/pipe-test.component';
 import { SalesModule } from './SalesModule/sales/sales.module';
+import { TodolistComponent } from './Components/todolist/todolist/todolist.component';
+import { TodotaskComponent } from './Components/todolist/todotask/todotask.component';
 //import { KmtometerPipe } from './Pipes/kmtometer.pipe';
 
 @NgModule({
@@ -26,6 +28,8 @@ import { SalesModule } from './SalesModule/sales/sales.module';
     FooterComponent,
     PageNotFoundComponent,
     PipeTestComponent,
+    TodolistComponent,
+    TodotaskComponent,
     //KmtometerPipe
   ],
   imports: [

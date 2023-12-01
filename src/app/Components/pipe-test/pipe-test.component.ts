@@ -11,4 +11,11 @@ export class PipeTestComponent {
 
   mydate = new Date();
 
+  cur: number= 175;
+
+  data = {
+           id: {test:10},
+           name : 'Mahesh'
+  }
+
 }

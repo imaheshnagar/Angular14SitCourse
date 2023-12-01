@@ -1,0 +1,10 @@
+<p>todolist works!</p>
+
+
+<input type="text" [value]="taskname" (keydown)="updatetaskName($event, task.value)" #task/>
+
+<button type="button" (click)="updatetaskName($event,task.value)">update</button>
+
+<app-todotask [taskname]="taskname" (updatedstatus) ='updatedvaluefromchild($event)' ></app-todotask>
+
+
