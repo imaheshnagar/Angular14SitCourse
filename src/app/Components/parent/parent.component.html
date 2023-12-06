@@ -1,0 +1,5 @@
+<p>parent works!</p>
+
+<input type="text" [value]="ParentData" (keydown)="handlekeydown($event)" >
+
+<app-child [myparentData] = "ParentData" (appChildclickevent)="handleclick($event)"></app-child>

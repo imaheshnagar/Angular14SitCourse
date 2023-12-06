@@ -5,12 +5,14 @@ import { ContactUsComponent } from './Components/contact-us/contact-us.component
 import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
 import { PipeTestComponent } from './Components/pipe-test/pipe-test.component';
 import { TodolistComponent } from './Components/todolist/todolist/todolist.component';
+import { ParentComponent } from './Components/parent/parent.component';
 
 const routes: Routes = [
   {path:"aboutus",component:AboutUsComponent},
   {path:"contactus",component:ContactUsComponent},
   {path:"pipetest",component:PipeTestComponent},
   {path:"todolist",component:TodolistComponent},
+  {path:"parent",component:ParentComponent},
 
 
   {path:"**",component:PageNotFoundComponent},
