@@ -7,7 +7,25 @@ import { Component } from '@angular/core';
 })
 export class TodolistComponent {
 
-  taskname: string = "Task 1";
+taskname: string = "Task 1";
+color = 'green';
+show =false ;
+num = 0 ;
+
+cssapplied = { primary: true, big: true };
+changecss()
+{
+  this.cssapplied = { primary: false, big: true };
+}
+
+persons = [
+  {name:'mahesh',gender:'M',age:47},
+  {name:'rajesh',gender:'M',age:41},
+  {name:'sonal',gender:'F',age:45},
+  {name:'mahesh2',gender:'M',age:47},
+  {name:'rajesh2',gender:'M',age:41},
+  {name:'sonal2',gender:'F',age:45}
+]
 
 updatetaskName($event: Event,arg0: string) {
    console.log($event);

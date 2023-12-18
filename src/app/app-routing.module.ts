@@ -6,6 +6,7 @@ import { PageNotFoundComponent } from './Components/page-not-found/page-not-foun
 import { PipeTestComponent } from './Components/pipe-test/pipe-test.component';
 import { TodolistComponent } from './Components/todolist/todolist/todolist.component';
 import { ParentComponent } from './Components/parent/parent.component';
+import { ProductListComponent } from './product-list/product-list.component';
 
 const routes: Routes = [
   {path:"aboutus",component:AboutUsComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:"pipetest",component:PipeTestComponent},
   {path:"todolist",component:TodolistComponent},
   {path:"parent",component:ParentComponent},
+  {path:'productlist',component:ProductListComponent},
 
 
   {path:"**",component:PageNotFoundComponent},

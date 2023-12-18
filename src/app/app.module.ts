@@ -20,6 +20,8 @@ import { CompformoduleComponent } from './Components/compformodule/compformodule
 import { StatusTextPipe } from './Pipes/status-text.pipe';
 import { ParentComponent } from './Components/parent/parent.component';
 import { ChildComponent } from './Components/child/child.component';
+import { Page1DetailComponent } from './Components/page1-detail/page1-detail.component';
+import { ProductListComponent } from './product-list/product-list.component';
 //import { KmtometerPipe } from './Pipes/kmtometer.pipe';
 
 @NgModule({
@@ -40,6 +42,8 @@ import { ChildComponent } from './Components/child/child.component';
     StatusTextPipe,
     ParentComponent,
     ChildComponent,
+    Page1DetailComponent,
+    ProductListComponent,
     //KmtometerPipe
   ],
   imports: [

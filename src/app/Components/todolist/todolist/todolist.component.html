@@ -6,5 +6,45 @@
 <button type="button" (click)="updatetaskName($event,task.value)">update</button>
 
 <app-todotask [taskname]="taskname" (updatedstatus) ='updatedvaluefromchild($event)' ></app-todotask>
+<br>
+<!-- calling different html into html = comp directive-->
+<!-- structure dir if , for and switch -->
+<app-page1-detail *ngIf="color=='show'"></app-page1-detail>
 
+<table style="border: 1px;">
+    <thead>
+    <th>
+        Name
+    </th>
+    <th>
+        Gender
+    </th>
+    <th>
+        age
+    </th>
+</thead>
+<tr *ngFor="let person of persons">
+    <td>{{person.name}}</td>
+    <td>{{person.gender}}</td>
+    <td>{{person.age}}</td>
+</tr>
+
+</table>
+<div class="card-body">
+    Input string : <input type='text' [(ngModel)]="num" (keydown)="changecss()"  />
+ 
+    <div [ngSwitch]="num">
+      <div *ngSwitchCase="'1'">One</div>
+      <div *ngSwitchCase="'2'">Two</div>
+      <div *ngSwitchCase="'3'">Three</div>
+      <div *ngSwitchCase="'4'">Four</div>
+      <div *ngSwitchCase="'5'">Five</div>
+      <div *ngSwitchDefault>This is Default</div>
+    </div>
+  </div>
+
+
+  <div [ngClass]="'primary big'">Sample Text</div>
+  <div [ngClass]="['primary', 'big']">Sample Text</div>
+  <div [ngClass]="cssapplied">Sample Text</div>
 
