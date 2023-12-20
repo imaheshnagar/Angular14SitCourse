@@ -1,18 +1,11 @@
 <p>product-list works!</p>
 
-<ul>
-    <li *ngFor="let prd of ProductList;first as f; even as e ; odd as o; ">
-       <div [ngClass]= " e ? {'even' : true} : {'odd':true} ">
-            <span>Title: {{prd.title}}</span>
-            <span>Stock: {{prd.stock}}</span>
-            <span>Price: {{prd.price}}</span>
-            <img src={{prd.images[0]}} />
-            <button type="button" (click)="AddtoCart(prd.id)">Add To Cart</button>
-       </div>
-   
-        <br>
-    </li>
-</ul>
+<app-productitem 
+        *ngFor="let prd of ProductList;first as f; even as e ; odd as o; " 
+        [prd]="prd"
+        [evenRow]="e"
+        (productItemEvent)="AddtoCart($event)" >
+</app-productitem>
 
 <hr>
 <span>cart data</span>

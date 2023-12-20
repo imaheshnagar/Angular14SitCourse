@@ -22,6 +22,8 @@ import { ParentComponent } from './Components/parent/parent.component';
 import { ChildComponent } from './Components/child/child.component';
 import { Page1DetailComponent } from './Components/page1-detail/page1-detail.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { ProductitemComponent } from './productitem/productitem.component';
+import { ProductService } from 'src/Services/product.service';
 //import { KmtometerPipe } from './Pipes/kmtometer.pipe';
 
 @NgModule({
@@ -44,6 +46,7 @@ import { ProductListComponent } from './product-list/product-list.component';
     ChildComponent,
     Page1DetailComponent,
     ProductListComponent,
+    ProductitemComponent,
     //KmtometerPipe
   ],
   imports: [
@@ -52,7 +55,7 @@ import { ProductListComponent } from './product-list/product-list.component';
     FormsModule ,
     SalesModule
   ],
-  providers: [],//service
+  providers: [ ],//service
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,23 +1,32 @@
 import { Component, OnInit } from '@angular/core';
-import products from '../ProductData';
+
+
+import { ProductService } from 'src/Services/product.service';
 import { product } from '../Product';
 
 
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.scss']
+  styleUrls: ['./product-list.component.scss'],
+  
 })
 export class ProductListComponent implements OnInit {
+
+  constructor(private prdservice:ProductService)
+  {
+
+  }
 
   ProductList: product[]=[];
   cart :product[]  = [];
   
   ngOnInit(): void {
-    this.ProductList = products;
+ 
+    this.ProductList =  this.prdservice.getproducts();
   }
 
-  AddtoCart(prdId :any) {
+  AddtoCart(prdId :number) {
     let prd = this.ProductList.find(x=>x.id == prdId);
     if(prd != undefined)
     {
@@ -25,6 +34,7 @@ export class ProductListComponent implements OnInit {
     }
     console.log(this.cart);
   }
+
   RemoveFromCart(prdId: any) {
 
     console.log(prdId)

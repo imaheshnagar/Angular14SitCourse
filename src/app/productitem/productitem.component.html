@@ -1,0 +1,8 @@
+<div [ngClass]= " e ? {'even' : true} : {'odd':true} ">
+    <span>Title: {{prd.title}}</span>
+    <span>Stock: {{prd.stock}}</span>
+    <span>Price: {{prd.price}}</span>
+    <!-- <img src={{prd.images[0]}} /> -->
+    <button type="button" (click)="AddtoCart(prd.id)">Add To Cart</button>
+</div>
+<br>
