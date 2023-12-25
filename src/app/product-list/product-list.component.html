@@ -1,12 +1,13 @@
-<p>product-list works!</p>
-
-<app-productitem 
+<div class='row'>
+    <div class='col-lg-10 col-md-9 col-sm-8'>
+<app-productitem class="products-container"
         *ngFor="let prd of ProductList;first as f; even as e ; odd as o; " 
         [prd]="prd"
         [evenRow]="e"
         (productItemEvent)="AddtoCart($event)" >
 </app-productitem>
-
+  </div>
+        </div>
 <hr>
 <span>cart data</span>
 <ul>

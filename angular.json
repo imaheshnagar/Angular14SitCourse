@@ -32,10 +32,13 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+
+            ]
           },
           "configurations": {
             "production": {
+               
               "budgets": [
                 {
                   "type": "initial",

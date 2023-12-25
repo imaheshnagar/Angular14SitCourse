@@ -24,6 +24,8 @@ import { Page1DetailComponent } from './Components/page1-detail/page1-detail.com
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductitemComponent } from './productitem/productitem.component';
 import { ProductService } from 'src/Services/product.service';
+import { CatNavComponent } from './cat-nav/cat-nav.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 //import { KmtometerPipe } from './Pipes/kmtometer.pipe';
 
 @NgModule({
@@ -47,6 +49,8 @@ import { ProductService } from 'src/Services/product.service';
     Page1DetailComponent,
     ProductListComponent,
     ProductitemComponent,
+    CatNavComponent,
+    SidenavComponent,
     //KmtometerPipe
   ],
   imports: [
