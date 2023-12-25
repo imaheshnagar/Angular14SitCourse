@@ -26,7 +26,9 @@ import { ProductitemComponent } from './productitem/productitem.component';
 import { ProductService } from 'src/Services/product.service';
 import { CatNavComponent } from './cat-nav/cat-nav.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { TodowithserviceComponent } from './todowithservice/todowithservice.component';
 //import { KmtometerPipe } from './Pipes/kmtometer.pipe';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -51,13 +53,15 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     ProductitemComponent,
     CatNavComponent,
     SidenavComponent,
+    TodowithserviceComponent,
     //KmtometerPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule ,
-    SalesModule
+    SalesModule,
+    HttpClientModule
   ],
   providers: [ ],//service
   bootstrap: [AppComponent]
