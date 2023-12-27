@@ -1,1 +1,13 @@
 <p>todowithservice works!</p>
+
+
+<div *ngFor = "let todotask of todolistdata|async;">
+    <span>{{todotask.title}}</span>
+    <button type="button" (click)="delete(todotask.id)"> Delete </button>
+</div>
+
+<div>
+    <input type="text" #title/>
+    <input type="text" #desc/>
+    <button type="button" (click)="Add(title.value,desc.value)" >Add todo</button>
+</div>

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { todotask } from 'src/app/interfaces/todotask';
 
 @Injectable({
   providedIn: 'root'
@@ -14,35 +15,12 @@ export class TodoService {
 
    getTodoList()
    {
-    this.httpser.get(this.ApiUrl).subscribe(
-      {
-         next:(data)=> {
-          console.log(data);
-        },
-        error:(err)=> console.log(Error),
-        complete:()=>console.log("complete")
-      }
-    )
+    return this.httpser.get<todotask[]>(this.ApiUrl) ;
    }
 
-   AddTodo()
+   AddTodo(todo: todotask)
    {
-    this.httpser.post(this.ApiUrl,
-        
-          {
-            "title":"morning task 4",
-            "detail":"morning task detail 4 ",
-            "status":2
-          }
-        
-      ).subscribe(
-      {
-         next:(data)=> {
-          console.log(data);
-        }
-      }
-    
-    )
+    return this.httpser.post(this.ApiUrl,todo)
    }
 
    UpdateTodo()
@@ -64,16 +42,9 @@ export class TodoService {
     )
    }
 
-   DeleteTodo()
+   DeleteTodo(taskid:number)
    {
-    this.httpser.delete(this.ApiUrl + '/10').subscribe(
-      {
-         next:(data)=> {
-          console.log(data);
-        }
-      }
-    
-    )
+    return this.httpser.delete(this.ApiUrl + '/' + taskid) ;
    }
 
 
