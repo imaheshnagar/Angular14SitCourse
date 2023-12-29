@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { TodoService } from 'src/Services/todo.service';
 import { todotask } from '../interfaces/todotask';
+import { observableToBeFn } from 'rxjs/internal/testing/TestScheduler';
 
 @Component({
   selector: 'app-todowithservice',
@@ -16,6 +17,7 @@ export class TodowithserviceComponent implements OnInit {
   }
 
   todolistdata! :Observable<todotask[]>;
+  todoTask:Observable<todotask> |undefined;
 
   ngOnInit(): void {
     this.gettodolist();
@@ -34,11 +36,42 @@ export class TodowithserviceComponent implements OnInit {
     );
     this.gettodolist();
   }
+ 
+  edit(taskid:number|undefined) {
+   
+   this.todoTask = this.todoser.GetTaskById(taskid||0)
+    
+  }
 
   gettodolist()
   {
     this.todolistdata = this.todoser.getTodoList() ;
   }
+
+  update(id: number,title: string,detail: string,status: number|string) {
+
+  let  taskstatus = status as number;
+
+    let todo :todotask ={
+      id,
+      title,
+      detail,
+      status:taskstatus 
+     }
+
+       this.todoser.UpdateTodo(todo).subscribe(
+        {
+           next:(data)=> {
+            console.log(data);
+          },
+          error:(err)=>console.log(err),
+          complete:()=>{}
+
+        }
+      
+      );
+    }
+    
 
   Add(title: string,desc: string) {
 
@@ -53,7 +86,8 @@ export class TodowithserviceComponent implements OnInit {
            next:(data)=> {
             console.log(data);
           },
-          error:(err)=>console.log(err)
+          error:(err)=>console.log(err),
+          complete:()=>{}
 
         }
       

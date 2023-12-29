@@ -18,28 +18,19 @@ export class TodoService {
     return this.httpser.get<todotask[]>(this.ApiUrl) ;
    }
 
+   GetTaskById(taskid:number)
+   {
+    return this.httpser.get<todotask>(this.ApiUrl + '/' + taskid ) ;
+   }
+
    AddTodo(todo: todotask)
    {
     return this.httpser.post(this.ApiUrl,todo)
    }
 
-   UpdateTodo()
+   UpdateTodo(todo: todotask)
    {
-    this.httpser.put(this.ApiUrl + '/10' ,
-          {
-            "id":10,
-            "title":"morning task  5",
-            "detail":"morning task detail 5 ",
-            "status":2
-          }
-      ).subscribe(
-      {
-         next:(data)=> {
-          console.log(data);
-        }
-      }
-    
-    )
+    return this.httpser.put(this.ApiUrl + '/' + todo.id ,todo)
    }
 
    DeleteTodo(taskid:number)
