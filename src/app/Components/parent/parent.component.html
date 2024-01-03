@@ -1,5 +1,11 @@
 <p>parent works!</p>
 
-<input type="text" [value]="ParentData" (keydown)="handlekeydown($event)" >
+<input type="text" [value]="ParentData" (keydown)="handlekeydown($event)" />
 
-<app-child [myparentData] = "ParentData" (appChildclickevent)="handleclick($event)"></app-child>
+<app-child
+  [myparentData]="ParentData"
+  (appChildclickevent)="handleclick($event)"
+>
+  <h1>this content coming from parent</h1>
+  <span class="parentSpan"> i am parent span </span>
+</app-child>

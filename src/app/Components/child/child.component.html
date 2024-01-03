@@ -1,5 +1,9 @@
 <p>child works!</p>
 
-{{myparentData}}
+<ng-content select=".parentSpan"></ng-content>
 
-<button type="button" (click)="generateEvent()" > Send data to parent</button>
+{{ myparentData }}
+
+<button type="button" (click)="generateEvent()">Send data to parent</button>
+
+<ng-content></ng-content>

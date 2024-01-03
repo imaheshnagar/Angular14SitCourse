@@ -11,93 +11,86 @@ import { observableToBeFn } from 'rxjs/internal/testing/TestScheduler';
 })
 export class TodowithserviceComponent implements OnInit {
 
-
-  constructor(private todoser:TodoService){
-    
+  constructor(private todoser: TodoService) {
   }
 
-  todolistdata! :Observable<todotask[]>;
-  todoTask:Observable<todotask> |undefined;
+  todolistdata!: Observable<todotask[]>;
+  todoTask: Observable<todotask> | undefined;
 
   ngOnInit(): void {
     this.gettodolist();
   }
 
-  delete(taskid:number|undefined) {
-    this.todoser.DeleteTodo(taskid||0).subscribe(
+  delete(taskid: number | undefined) {
+    this.todoser.DeleteTodo(taskid || 0).subscribe(
       {
-         next:(data)=> {
+        next: (data) => {
           console.log(data);
         },
-        error:(err)=>console.log(err)
+        error: (err) => console.log(err)
 
       }
-    
+
     );
     this.gettodolist();
   }
- 
-  edit(taskid:number|undefined) {
-   
-   this.todoTask = this.todoser.GetTaskById(taskid||0)
-    
+
+  edit(taskid: number | undefined) {
+    this.todoTask = this.todoser.GetTaskById(taskid || 0)
   }
 
-  gettodolist()
-  {
-    this.todolistdata = this.todoser.getTodoList() ;
+  gettodolist() {
+    this.todolistdata = this.todoser.getTodoList();
   }
 
-  update(id: number,title: string,detail: string,status: number|string) {
-
-  let  taskstatus = status as number;
-
-    let todo :todotask ={
+ update(id: number, title: string, detail: string, status: number | string) {
+    let taskstatus = status as number;
+    let todo: todotask = {
       id,
       title,
       detail,
-      status:taskstatus 
-     }
-
-       this.todoser.UpdateTodo(todo).subscribe(
-        {
-           next:(data)=> {
-            console.log(data);
-          },
-          error:(err)=>console.log(err),
-          complete:()=>{}
-
-        }
-      
-      );
+      status: taskstatus
     }
-    
 
-  Add(title: string,desc: string) {
+    this.todoser.UpdateTodo(todo).subscribe(
+      {
+        next: (data) => {
+          console.log(data);
+        },
+        error: (err) => console.log(err),
+        complete: () => { }
 
-     let todo :todotask ={
+      }
+
+    );
+  }
+
+
+  Add(title: string, desc: string) {
+
+    let todo: todotask = {
       title,
-      detail:desc,
-      status:1
-     }
-
-       this.todoser.AddTodo(todo).subscribe(
-        {
-           next:(data)=> {
-            console.log(data);
-          },
-          error:(err)=>console.log(err),
-          complete:()=>{}
-
-        }
-      
-      );
-      this.gettodolist();
+      detail: desc,
+      status: 1
     }
+
+    this.todoser.AddTodo(todo).subscribe(
+      {
+        next: (data) => {
+          console.log(data);
+        },
+        error: (err) => console.log(err),
+        complete: () => { }
+
+      }
+
+    );
+    this.gettodolist();
+  }
 
 }
 
-  
-    
+
+
 
 

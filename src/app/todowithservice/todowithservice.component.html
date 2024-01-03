@@ -1,26 +1,29 @@
 <p>todowithservice works!</p>
 
-
-<div *ngFor = "let todotask of todolistdata|async;">
-    <span>{{todotask.title}}</span>
-    <button type="button" (click)="delete(todotask.id)"> Delete </button>
-    <button type="button" (click)="edit(todotask.id)"> Edit </button>
+<div *ngFor="let todotask of todolistdata | async">
+  <span>{{ todotask.title }}</span>
+  <button type="button" (click)="delete(todotask.id)">Delete</button>
+  <button type="button" (click)="edit(todotask.id)">Edit</button>
 </div>
 
 <div>
-    <input type="text" #title/>
-    <input type="text" #desc/>
-    <button type="button" (click)="Add(title.value,desc.value)" >Add todo</button>
+  <input type="text" #title />
+  <input type="text" #desc />
+  <button type="button" (click)="Add(title.value, desc.value)">Add todo</button>
 </div>
 
-
-<div *ngIf="todoTask|async as tdt">
-    <input type="text" [value]="tdt.title" #title/>
-    <input type="text" [value]="tdt.detail" #desc/>
-    <select [value]="tdt.status" #status>
-        <option value="1">Start </option>
-        <option value="2">Inprogress </option>
-        <option value="3">Complete </option>
-    </select>
-    <button type="button" (click)="update(tdt.id||0 , title.value,desc.value,status.value)" >update todo</button>
+<div *ngIf="todoTask | async as tdt">
+  <input type="text" [value]="tdt.title" #title />
+  <input type="text" [value]="tdt.detail" #desc />
+  <select [value]="tdt.status" #status>
+    <option value="1">Start</option>
+    <option value="2">Inprogress</option>
+    <option value="3">Complete</option>
+  </select>
+  <button
+    type="button"
+    (click)="update(tdt.id || 0, title.value, desc.value, status.value)"
+  >
+    update todo
+  </button>
 </div>
